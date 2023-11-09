@@ -66,8 +66,6 @@ export default {
 
         const isEmailTaken = await Customer.isEmailTaken(req.body.email);
 
-        console.log(isEmailTaken);
-
         if (!isEmailTaken) {
             let customer = new Customer({
                 email: req.body.email,
