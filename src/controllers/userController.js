@@ -1,7 +1,7 @@
 export default {
     /**
      * GET `/users` - REST API
-     * Returns a list of users (paginated)
+     * Returns user details (paginated)
      */
     getUsers: async (req, res) => {
         const page = req.body.page ?? 1;
