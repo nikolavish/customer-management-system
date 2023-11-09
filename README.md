@@ -111,7 +111,7 @@ Example Response:
 ---
 ### GET /users
 
-Retrieve a paginated list of users.
+Retrieve user details.
 
 #### Response
 
