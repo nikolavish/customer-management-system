@@ -2,7 +2,6 @@ import mongoose from "mongoose";
 import bcrypt from 'bcrypt';
 import JWT from 'jsonwebtoken';
 import pagination from "../hooks/pagination.js";
-import user from "./user.js";
 
 /**
  * Defining customer fields, statics and methods
@@ -77,13 +76,6 @@ schema.methods.authenticate = function (password) {
         return JWT.sign({ _id: this._id }, JWTSecret);
 
     return false;
-}
-
-/**
- * Getting users associated with the customer
- */
-schema.methods.getUsers = function () {
-    return user.find({ customerOf: this._id });
 }
 
 export default new mongoose.model('Customer', schema);

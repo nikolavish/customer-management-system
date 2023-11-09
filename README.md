@@ -113,11 +113,6 @@ Example Response:
 
 Retrieve a paginated list of users.
 
-#### Parameters
-
-- `page` (optional, default: 1) - Page number for pagination
-- `perPage` (optional, default: 10) - Rows per page for pagination
-
 #### Response
 
 - `200 OK` - Successful response
@@ -127,19 +122,16 @@ Retrieve a paginated list of users.
 Example Request:
 
 ```
-GET /users?page=1&perPage=10
+GET /users
 ```
 Example Response:
 ```json
 {
     "success": true,
     "data": {
-        "users": {},
-        "pagination": {
-            "currentPage": 1,
-            "totalUsers": 0,
-            "totalPages": 0
-        }
+        "_id": "654d57d6d8ff49eeb3d08aca",
+        "name": "Nikola",
+        "email": "nikola@vish.mk"
     }
 }
 ```

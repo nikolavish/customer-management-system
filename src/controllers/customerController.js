@@ -21,5 +21,15 @@ export default {
                 }
             }
         });
+    },
+    getDetails: async (req, res) => {
+        return res.json({
+            success: true,
+            data: {
+                _id: res.locals.customer._id,
+                name: res.locals.customer.name,
+                email: res.locals.customer.email,
+            }
+        })
     }
 }

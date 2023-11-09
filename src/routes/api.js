@@ -6,7 +6,6 @@ import authenticated from '../middlewares/authenticated.js';
 // Controllers
 import authController from '../controllers/authController.js';
 import customerController from '../controllers/customerController.js';
-import userController from '../controllers/userController.js';
 
 // Initializing new router
 const apiRouter = Router();
@@ -19,6 +18,6 @@ apiRouter.post('/signup', authController.signUp);
 apiRouter.get('/customers', customerController.getCustomers);
 
 // User endpoints
-apiRouter.get('/users', authenticated, userController.getUsers);
+apiRouter.get('/users', authenticated, customerController.getDetails);
 
 export { apiRouter };
