@@ -65,10 +65,7 @@ POST /signup
 Example Response:
 ```json
 {
-    "success": true,
-    "data": {
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkNTdkNmQ4ZmY0OWVlYjNkMDhhY2EiLCJpYXQiOjE2OTk1NzEwODF9.OGE57us85zS74ALWI0yc7qZ9EJgwV4HOEDygAEKOg98"
-    }
+    "success": true
 }
 ```
 ---
